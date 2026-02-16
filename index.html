@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bitsight Maturity Model Dashboard</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main id="dashboard-root" class="dashboard">
+      <header class="dashboard-header">
+        <div class="brand">
+          <img src="bitsight_logo.jpeg" alt="Bitsight logo" class="logo" />
+          <div>
+            <h1>Bitsight Maturity Model Dashboard</h1>
+            <p id="last-updated" class="subtle"></p>
+          </div>
+        </div>
+
+        <div class="export-controls no-print">
+          <label for="export-format">Export as</label>
+          <select id="export-format" aria-label="Export format">
+            <option value="csv">CSV</option>
+            <option value="pdf">PDF</option>
+          </select>
+          <button id="export-button" type="button">Export</button>
+        </div>
+      </header>
+
+      <section class="summary-grid">
+        <article class="summary-card">
+          <h2>Overall Maturity</h2>
+          <p class="summary-value">3.2 / 5</p>
+        </article>
+        <article class="summary-card">
+          <h2>Assessed Domains</h2>
+          <p class="summary-value">6</p>
+        </article>
+        <article class="summary-card">
+          <h2>Target Date</h2>
+          <p class="summary-value">Q4 2026</p>
+        </article>
+      </section>
+
+      <section class="table-card">
+        <h2>Domain Detail</h2>
+        <table id="maturity-table">
+          <thead>
+            <tr>
+              <th>Domain</th>
+              <th>Capability</th>
+              <th>Owner</th>
+              <th>Maturity (1-5)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Asset Intelligence</td>
+              <td>Continuous discovery and validation</td>
+              <td>Security Operations</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>Attack Surface Management</td>
+              <td>External exposure monitoring</td>
+              <td>Threat Management</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>Vulnerability Management</td>
+              <td>Risk-based prioritization</td>
+              <td>Infrastructure Security</td>
+              <td>3</td>
+            </tr>
+            <tr>
+              <td>Third-Party Risk</td>
+              <td>Supplier assessment workflow</td>
+              <td>GRC</td>
+              <td>2</td>
+            </tr>
+            <tr>
+              <td>Incident Readiness</td>
+              <td>Playbooks and tabletop exercises</td>
+              <td>SOC</td>
+              <td>4</td>
+            </tr>
+            <tr>
+              <td>Executive Reporting</td>
+              <td>Board-level KPI communication</td>
+              <td>Security Leadership</td>
+              <td>3</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
